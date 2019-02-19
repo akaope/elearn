@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['prefix' => '/dashboard'], function(){
+	Route::get('/profil','DashboardController@profil');
+});
+
 Route::get('/siswa/list', 'SiswaController@showAll');
