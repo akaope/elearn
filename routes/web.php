@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => '/dashboard'], function(){
 	Route::get('/profil','DashboardController@profil');
+	Route::get('/setting','DashboardController@setting');
 });
 
 Route::get('/siswa/list', 'SiswaController@showAll');
